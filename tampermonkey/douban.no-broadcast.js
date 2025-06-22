@@ -21,15 +21,13 @@
         // 检查是否有'dlg-opt-share'的元素被插入
         let checkbox = node.querySelector("#dlg-opt-share");
         if (checkbox) {
-          console.log("Cancelled " + checkbox.tagName);
+          console.log("Cancelled ", checkbox.tagName);
           if (checkbox.tagName.toLowerCase() === "input") {
             // 如果是输入类型为checkbox的元素则取消选中
             checkbox.checked = false;
             checkbox.value = 0;
             // 自动点击保存
-            let submit = node.querySelector(
-              "form > div.submit-item > span > input[type=submit]"
-            );
+            let submit = node.querySelector("form > div.submit-item > span > input[type=submit]");
             submit?.click();
           }
           observer.disconnect();
