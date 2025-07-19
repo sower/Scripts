@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A collection of useful bookmarklets for myself using in daily life.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Ylem's Bookmarklet Collection</title>
+  <style>
+    :root {
+      --primary-color: #4a90e2;
+      --background-color: #f4f7f9;
+      --card-background: #ffffff;
+      --text-color: #333333;
+      --subtle-text-color: #666666;
+      --shadow-color: rgba(0, 0, 0, 0.08);
+    }
+    body {
+      font-family: 'Inter', 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #4a90e2, #007bff);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 5px solid #3a7ac8;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    header b {
+        display: inline-block;
+        margin-top: 10px;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 5px 15px;
+        border-radius: 15px;
+        font-size: 0.9rem;
+    }
+    main {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    main h2 {
+        font-size: 1.8rem;
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .bookmarklet-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .bookmarklet-item {
+      background: var(--card-background);
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px var(--shadow-color);
+      padding: 20px 25px;
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+    .bookmarklet-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 7px 10px rgba(0, 0, 0, 0.12);
+    }
+    .bookmarklet-item a.bookmarklet {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 1.3rem;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    .bookmarklet-item a.bookmarklet:hover {
+      text-decoration: underline;
+    }
+    .bookmarklet-desc {
+      color: var(--subtle-text-color);
+      font-size: 1rem;
+      margin: 0;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #343a40;
+      color: white;
+    }
+    footer p {
+        margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ylem's Bookmarklet Collection</h1>
+    <b>Version: 0.1.0</b>
+  </header>
+
+  <main>
+    <h2>Available Bookmarklets</h2>
+    <p>Drag these links to your bookmarks bar:</p>
+    <ul class="bookmarklet-list">
+      <li class="bookmarklet-item">
+            <a href="javascript:(function()%7Bwindow.location.host.includes(%22github.com%22)%3Fwindow.open(window.location.href.replace(%22github.com%22%2C%22github.githistory.xyz%22))%3Aalert(%22This%20bookmarklet%20only%20works%20on%20GitHub%20URLs.%22)%3B%7D)()%3B" title="Github File History Commit" class="bookmarklet">Github File History Commit</a>
+            <p class="bookmarklet-desc">查看当前文件历史修改</p>
+          </li><li class="bookmarklet-item">
+            <a href="javascript:(function()%7Bfunction%20e(e)%7Blet%20l%3Dnew%20Event(%22input%22%2C%7Bbubbles%3A!0%2Ccancelable%3A!0%7D)%3Bfor(let%20t%20of%20Object.values(e))t.dispatchEvent(l)%7Dlet%20l%3Ddocument.getElementById(%22username%22)%3Bl.value%3D%22user%22%3Blet%20t%3Ddocument.getElementById(%22password%22)%3Bt.value%3D%22******%22%2Ce(%7Busername%3Al%2Cpassword%3At%7D)%2Cdocument.querySelector(%22.login%22).click()%2Cconsole.log(%22login%20completely%22)%3B%7D)()%3B" title="Page Login" class="bookmarklet">Page Login</a>
+            <p class="bookmarklet-desc"></p>
+          </li><li class="bookmarklet-item">
+            <a href="javascript:(function()%7Bdocument.body.contentEditable%3D!0%2Calert(%22%E5%B7%B2%E5%BC%80%E5%90%AF%E7%BD%91%E9%A1%B5%E7%BC%96%E8%BE%91%EF%BC%8C%E6%8C%89%20Esc%20%E5%8F%96%E6%B6%88%EF%BC%81%22)%2Cdocument.addEventListener(%22keydown%22%2Cfunction(e)%7B%22Escape%22%3D%3D%3De.key%26%26(document.body.contentEditable%3D!1)%7D)%3B%7D)()%3B" title="Page Edit" class="bookmarklet">Page Edit</a>
+            <p class="bookmarklet-desc">网页可编辑</p>
+          </li><li class="bookmarklet-item">
+            <a href="javascript:(function()%7Bwindow.location.host.includes(%22github.com%22)%3Fwindow.open(window.location.href.replace(%22github.com%22%2C%22sourcegraph.com%2Fgithub.com%22))%3Aalert(%22This%20bookmarklet%20only%20works%20on%20GitHub%20URLs.%22)%3B%7D)()%3B" title="Github Sourcegraph" class="bookmarklet">Github Sourcegraph</a>
+            <p class="bookmarklet-desc"></p>
+          </li><li class="bookmarklet-item">
+            <a href="javascript:(function()%7Bwindow.location.host.includes(%22github.com%22)%3Fwindow.open(window.location.href.replace(%22github.com%22%2C%22github1s.com%22))%3Aalert(%22This%20bookmarklet%20only%20works%20on%20GitHub%20URLs.%22)%3B%7D)()%3B" title="Github 1s" class="bookmarklet">Github 1s</a>
+            <p class="bookmarklet-desc">在VsCode中查看</p>
+          </li><li class="bookmarklet-item">
+            <a href="javascript:(function()%7Bwindow.location.host.includes(%22yuque.com%22)%3Fwindow.open(location.href%2B%22%2Fmarkdown%3Fplain%3Dtrue%26anchor%3Dfalse%26linebreak%3Dfalse%22)%3Aalert(%22This%20bookmarklet%20only%20works%20on%20YuQue%20URLs.%22)%3B%7D)()%3B" title="Yuque To Md" class="bookmarklet">Yuque To Md</a>
+            <p class="bookmarklet-desc"></p>
+          </li>
+    </ul>
+  </main>
+  <footer>
+    <p>Generated with ❤️ by Ylem</p>
+  </footer>
+</body>
+</html>
